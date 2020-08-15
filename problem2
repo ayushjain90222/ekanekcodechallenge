@@ -1,0 +1,26 @@
+def min_combinations( a, b, k)
+    index2 = Array.new(a.length, 0)
+    while k >= 0 do
+        min_sum = 99999999999999
+        min_index = 0
+        i = 0
+        n2 = b.length
+        a.length.times do
+            puts i
+            puts i 
+            if index2[i] < n2 and (a[i] + b[index2[i]] < min_sum)
+                min_index = i
+                min_sum = a[i] + b[index2[i]]
+            end
+            i+=1
+        end
+        puts [a[min_index], b[index2[min_index]]].join(",")
+        index2[min_index] += 1
+        k-=1
+    end
+end
+a = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+b = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75]
+
+k = 10
+min_combinations(a, b, k) 

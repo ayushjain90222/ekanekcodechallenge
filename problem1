@@ -1,0 +1,30 @@
+class Student
+  @@array = Array.new
+  attr_accessor :name, :age, :marks, :rollNumber
+
+  def self.all_instances
+    @@array
+  end
+
+  def initialize(name, age, marks, rollNumber)
+    @name = name
+    @age = age
+    @marks = marks
+    @rollNumber = rollNumber
+    @@array << self
+  end
+end
+
+@student_array = Student.all_instances
+
+Student.new('ayush', 22, 24, 23)
+
+
+def sort_student(student_array, criteria = [])
+	criteria = criteria.map{|j| j.gsub(j, "x.#{j}")}
+	student_array.sort_by{|x|criteria}
+end
+
+sort_student(@student_array, ['name', 'age'])
+
+

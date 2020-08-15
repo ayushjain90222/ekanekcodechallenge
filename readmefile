@@ -1,0 +1,10 @@
+In problem1 
+
+I have created multiple objects array and sort by criteria you can pass in that object 
+
+
+
+
+In problem 2 
+We one by one find k smallest sum pairs, starting from least sum pair. The idea is to keep track of all elements of second array which have been already considered for every element first array so that in next iteration we only consider next element. For this purpose, we use an index array index2[] to track the indexes of next elements in the other array. 
+We first take a min_index with large value.

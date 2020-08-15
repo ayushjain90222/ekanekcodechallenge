@@ -6,8 +6,6 @@ def min_combinations( a, b, k)
         i = 0
         n2 = b.length
         a.length.times do
-            puts i
-            puts i 
             if index2[i] < n2 and (a[i] + b[index2[i]] < min_sum)
                 min_index = i
                 min_sum = a[i] + b[index2[i]]
